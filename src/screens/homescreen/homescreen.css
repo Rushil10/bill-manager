@@ -3,12 +3,24 @@
   display: grid;
   grid-template-columns: 3fr 1.5fr;
   grid-gap: 0.2rem;
+  grid-template-areas: "column1 column2";
+}
+
+#column1 {
+  grid-area: column1;
+}
+
+#column2 {
+  grid-area: column2;
 }
 
 @media screen and (max-width: 850px) {
   .main-container {
     height: 100vh;
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "column2"
+      "column1";
   }
 }
 

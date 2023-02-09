@@ -24,7 +24,7 @@ export default function TimeSeriesChart(props) {
     allBills.forEach((bill) => {
       var realDate = new Date(bill.date.replace("-", "/"));
       var date = realDate.toString();
-      var key = date.substring(4, 7) + date.substring(10, 15);
+      var key = date.substring(4, 10) + date.substring(10, 15);
       if (dict[key] !== undefined) {
         dict[key].amount = dict[key].amount + Number(bill.amount);
       } else {

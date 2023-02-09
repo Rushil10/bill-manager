@@ -66,7 +66,7 @@ function HomeScreen() {
   return (
     <>
       <div className="main-container">
-        <div className="bill-manager">
+        <div id="column1" className="bill-manager">
           <div className="features">
             <CoolButton name="Add" onClick={() => openModal()} />
             <div style={{ width: 15 }}></div>
@@ -84,7 +84,9 @@ function HomeScreen() {
             )}
           </div>
         </div>
-        <TotalBilling bills={copyOfBills} />
+        <div id="column2">
+          <TotalBilling bills={copyOfBills} />
+        </div>
       </div>
       <BillModal open={open} closeModal={closeModal} />
       <TimeSeriesModal
