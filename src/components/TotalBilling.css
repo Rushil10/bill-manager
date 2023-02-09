@@ -1,0 +1,8 @@
+.total-container {
+  margin: 9px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 85px;
+  font-size: 21px;
+}

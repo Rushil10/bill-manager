@@ -1,0 +1,62 @@
+.main-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 1.5fr;
+  grid-gap: 0.2rem;
+}
+
+@media screen and (max-width: 850px) {
+  .main-container {
+    height: 100vh;
+    grid-template-columns: 1fr;
+  }
+}
+
+.features {
+  padding: 15px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.edit-options {
+  display: flex;
+  flex-direction: "row";
+  flex: 1;
+  align-items: flex-start;
+}
+
+.bill-manager {
+  //display: grid;
+  //grid-template-rows: 1fr 4fr;
+  //display: flex;
+  //flex: 1;
+  //flex-direction: "column";
+}
+
+.bills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  //justify-content: space-between;
+}
+
+#showbills {
+  background-color: blue;
+}
+
+#addbills {
+  background-color: red;
+}
+
+h4 {
+  margin: 4px;
+}
+
+h3 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
