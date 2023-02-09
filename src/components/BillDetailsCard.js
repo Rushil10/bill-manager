@@ -5,9 +5,11 @@ import { MdOutlineDelete } from "react-icons/md";
 import BillModal from "./BillModal";
 import store from "../redux/store";
 import { deleteBill } from "../redux/bills/billActions";
+import { useSelector } from "react-redux";
 
 function BillDetailsCard(props) {
   const [open, setOpen] = useState(false);
+  const indexes = useSelector((state) => state.bills.highlightedID);
 
   const openModal = () => {
     setOpen(true);
@@ -23,7 +25,14 @@ function BillDetailsCard(props) {
 
   return (
     <>
-      <div className="billdetails-container">
+      <div
+        className="billdetails-container"
+        style={{
+          backgroundColor: indexes.includes(props.bill.id.toString())
+            ? "rgba(0, 255, 0, 0.3)"
+            : "transparent",
+        }}
+      >
         <h3>ID : {props.bill.id}</h3>
         <h4>
           Details :{" "}

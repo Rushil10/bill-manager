@@ -10,6 +10,7 @@ import TotalBilling from "../../components/TotalBilling";
 import FilterDropdown from "../../components/FilterDropdown";
 import TimeSeriesChart from "../../components/TimeSeriesChart";
 import TimeSeriesModal from "../../components/TimeSeriesModal";
+import BillCalculation from "../../components/BillCalculation";
 
 function HomeScreen() {
   useEffect(() => {
@@ -76,8 +77,8 @@ function HomeScreen() {
           </div>
           <div className="bills">
             {!loading ? (
-              copyOfBills.map((bill) => (
-                <BillDetailsCard key={bill.id} bill={bill} />
+              copyOfBills.map((bill, index) => (
+                <BillDetailsCard index={index} key={bill.id} bill={bill} />
               ))
             ) : (
               <h4>Loading</h4>
@@ -86,6 +87,7 @@ function HomeScreen() {
         </div>
         <div id="column2">
           <TotalBilling bills={copyOfBills} />
+          <BillCalculation bills={copyOfBills} />
         </div>
       </div>
       <BillModal open={open} closeModal={closeModal} />
