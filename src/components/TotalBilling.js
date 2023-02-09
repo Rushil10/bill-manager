@@ -22,7 +22,7 @@ function TotalBilling(props) {
 
   return (
     <div className="total-container">
-      <h4>Number of Bills : {bills.length}</h4>
+      <h4>Number of Bills : {props.bills.length}</h4>
       <h2>Total : $ {amount}</h2>
     </div>
   );
